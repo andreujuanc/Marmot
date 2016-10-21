@@ -24,7 +24,10 @@ namespace Marmot.Commands
 
         public override int Run(string[] remainingArguments)
         {
-            return new InstallProcess(AppUrl).Start();
+            var install = new InstallProcess(this);
+            var task = Task.Run(async () => await install.Start());
+            task.Wait();
+            return task.Result;
         }
     }
 }

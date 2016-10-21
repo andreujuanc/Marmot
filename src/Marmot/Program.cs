@@ -14,11 +14,7 @@ namespace Marmot
         public static int Main(string[] args)
         {
             var commands = GetCommands();
-
             var result = ConsoleCommandDispatcher.DispatchCommand(commands, args, Console.Out);
-#if DEBUG
-            Console.Read();
-#endif
             return result;
         }
 

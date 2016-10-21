@@ -52,6 +52,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ManyConsole, Version=0.4.2.20, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ManyConsole.0.4.2.20\lib\ManyConsole.dll</HintPath>
       <Private>True</Private>
@@ -71,6 +75,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\InstallCommand.cs" />
+    <Compile Include="Core\AppManager.cs" />
+    <Compile Include="Core\Package.cs" />
+    <Compile Include="Core\ReleaseInfo.cs" />
+    <Compile Include="Core\RemoteFile.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="Processes\InstallProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
